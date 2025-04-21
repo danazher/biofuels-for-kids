@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biofuels for Kids!</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Luckiest+Guy&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>🌿 Biofuels for Kids! 🌿</h1>
+    <p>Learn how we make clean “plant juice” that helps cars go vroom without smoky air!</p>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="#intro">What?</a></li>
+      <li><a href="#types">Types</a></li>
+      <li><a href="#mixmake">Mix & Make</a></li>
+      <li><a href="#blend">Clean Slider</a></li>
+      <li><a href="#quiz">Quiz</a></li>
+      <li><a href="#funfacts">Fun Facts</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+      <li><a href="#resources">More</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- INTRO -->
+    <section id="intro">
+      <h2>What Are Biofuels?</h2>
+      <p>Biofuels are like super‑juice made from plants, seeds, or even tiny algae! When cars use biofuels, they puff out much less “yucky smoke” that makes Earth too warm.</p>
+      <p>
+        <span class="tooltip">Greenhouse gases
+          <span class="tooltip-text">Gases that trap heat around Earth, making it too warm.</span>
+        </span>
+        go way down, and our air stays cleaner!
+      </p>
+    </section>
+
+    <!-- TYPES -->
+    <section id="types">
+      <h2>🧪 Three Kinds of Biofuels</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Ethanol</h3>
+          <p>From corn and sugarcane.</p>
+        </div>
+        <div class="card">
+          <h3>Biodiesel</h3>
+          <p>From used cooking oil and veggie fats.</p>
+        </div>
+        <div class="card">
+          <h3>Algal Fuel</h3>
+          <p>From tiny water plants called algae.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MIX & MAKE -->
+    <section id="mixmake">
+      <h2>🧑‍🔬 Mix & Make Biofuel!</h2>
+
+      <!-- Virtual Mix -->
+      <div class="virtual-mix">
+        <h3>Virtual Mix</h3>
+        <p>Drag the slider to “mix” plant oil and pretend alcohol. Watch your beaker fill up and glow orange!</p>
+        <div class="beaker">
+          <div class="beaker-fill" id="beakerFill"></div>
+        </div>
+        <input type="range" id="mixSlider" min="0" max="100" value="0">
+      </div>
+
+      <hr>
+
+      <!-- Real DIY -->
+      <div class="real-diy">
+        <h3>Real DIY Experiment</h3>
+        <p><em>(Only with adult help and safety gear!)</em></p>
+
+        <details>
+          <summary>Step 1: Gather Materials</summary>
+          <ul>
+            <li>Veggie oil (250 ml) – kitchen fuel</li>
+            <li>Rubbing alcohol (50 ml) – helps it react</li>
+            <li>Lye (1 g) – magic powder to speed up the mix</li>
+            <li>Jar with lid & funnel – for safe pouring</li>
+            <li>Goggles, gloves & apron – keep you safe</li>
+          </ul>
+          <p><strong>Why?</strong> We need oil to turn into fuel, alcohol to help it, lye to start the reaction, and safety gear to protect us.</p>
+        </details>
+
+        <details>
+          <summary>Step 2: Make Your Magic Mix</summary>
+          <p><strong>Adult only:</strong> Slowly add the lye into the alcohol (never pour water into lye!). Stir gently until clear. This makes “methoxide,” your fuel starter.</p>
+        </details>
+
+        <details>
+          <summary>Step 3: Combine & Shake</summary>
+          <p>Pour methoxide into the oil using the funnel. Close the jar and shake for 5 minutes. Then let it sit for 30 minutes to separate.</p>
+        </details>
+
+        <details>
+          <summary>Step 4: See the Layers</summary>
+          <p>You’ll see two layers: top = biofuel (orange), bottom = glycerin (yucky goo). Carefully pour off the top layer to see your fresh biofuel!</p>
+        </details>
+
+        <p class="warning">
+          ⚠️ <strong>For demo only:</strong> This biofuel is unwashed and unpurified—<em>do not</em> use in engines!
+        </p>
+
+        <h4>What Did You Learn?</h4>
+        <ul>
+          <li>Chemistry in action: mixing, shaking, separating.</li>
+          <li>Sustainability: turning waste into energy.</li>
+          <li>Safety first: why goggles and gloves matter.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CLEAN SLIDER -->
+    <section id="blend">
+      <h2>⚡ How Clean Can You Go?</h2>
+      <p>Slide to pick your biofuel blend and see how much CO₂ (“Earth‑warming gas”) you save!</p>
+      <label for="blendSlider">Blend: <span id="blendPercent">50</span>% biofuel</label>
+      <input type="range" id="blendSlider" min="0" max="100" value="50">
+      <p>CO₂ Saved: <span id="co2Reduction">39</span>%*</p>
+      <p class="note">*Pure biofuel can save up to 78%!</p>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quiz">
+      <h2>🎓 Quick Quiz</h2>
+      <div class="quiz-question">
+        <p>1. What is ethanol made from?</p>
+        <button onclick="checkAnswer('Corn',0)">Corn</button>
+        <button onclick="checkAnswer('Plastic',0)">Plastic</button>
+        <button onclick="checkAnswer('Metal',0)">Metal</button>
+        <div class="quiz-result" id="quiz0"></div>
+      </div>
+      <div class="quiz-question">
+        <p>2. What tiny plant can make fuel?</p>
+        <button onclick="checkAnswer('Algae',1)">Algae</button>
+        <button onclick="checkAnswer('Trees',1)">Trees</button>
+        <button onclick="checkAnswer('Rock',1)">Rock</button>
+        <div class="quiz-result" id="quiz1"></div>
+      </div>
+    </section>
+
+    <!-- FUN FACTS -->
+    <section id="funfacts">
+      <h2>🎉 Fun Facts</h2>
+      <p>Press the button to learn a cool fact about biofuels!</p>
+      <button onclick="showFunFact()">Tell me a fun fact!</button>
+      <p id="funFactText" class="funfact-text"></p>
+    </section>
+
+    <!-- GLOSSARY -->
+    <section id="glossary">
+      <h2>📚 Glossary</h2>
+      <details>
+        <summary><strong>Biofuel</strong></summary>
+        Fuel made from living things like plants or algae.
+      </details>
+      <details>
+        <summary><strong>Lye</strong></summary>
+        A strong powder that helps mix oil and alcohol.
+      </details>
+      <details>
+        <summary><strong>Methoxide</strong></summary>
+        The special mix that starts the fuel reaction.
+      </details>
+    </section>
+
+    <!-- RESOURCES -->
+    <section id="resources">
+      <h2>🔗 Learn More</h2>
+      <ul>
+        <li><a href="https://www.energy.gov/eere/bioenergy/biofuels-basics" target="_blank">Biofuels Basics (DOE)</a></li>
+        <li><a href="https://youtu.be/7DbyxsWESHo" target="_blank">How Biofuels Work (Video)</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Biofuels for Kids</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

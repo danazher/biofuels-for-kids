@@ -1,0 +1,198 @@
+/* FONTS & RESET */
+body, h1, h2, h3, p, ul, li, button {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #eef6ff;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(-45deg, #005cbf, #ff8800, #007bff, #ffa500);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+}
+header h1 {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 2.5rem;
+  color: white;
+}
+header p {
+  color: #fffde7;
+  margin-top: 0.5rem;
+}
+
+/* NAVIGATION */
+nav {
+  background: #007bff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+nav li {
+  margin: 0.5rem 1rem;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #ffc107;
+}
+
+/* SECTIONS */
+main {
+  max-width: 900px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+}
+section {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+section h2 {
+  color: #005cbf;
+  margin-bottom: 0.5rem;
+}
+
+/* TOOLTIP */
+.tooltip {
+  position: relative;
+  cursor: help;
+  color: #007bff;
+  border-bottom: 1px dashed #007bff;
+}
+.tooltip-text {
+  visibility: hidden;
+  width: 180px;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 0.5rem;
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.85rem;
+  line-height: 1.2;
+}
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.card {
+  background: #ff8800;
+  color: white;
+  flex: 1;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* BEAKER SIMULATION */
+.beaker {
+  position: relative;
+  width: 120px;
+  height: 200px;
+  border: 5px solid #005cbf;
+  border-radius: 0 0 20px 20px;
+  margin: 1rem auto;
+  overflow: hidden;
+  background: #eef6ff;
+}
+.beaker-fill {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0%;
+  background: rgba(255,136,0,0.5);
+  transition: height 0.2s, background 0.2s;
+}
+
+/* SLIDERS */
+input[type=range] {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+/* QUIZ */
+.quiz-question {
+  margin-bottom: 1rem;
+}
+.quiz-question button {
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+}
+.quiz-result {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+/* GLOSSARY */
+details {
+  margin-bottom: 0.5rem;
+}
+details summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #005cbf;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #005cbf;
+  color: white;
+}
+
+/* ANIMATED BACKGROUND */
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Fun Facts styling */
+#funfacts button {
+  background: #ff8800;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#funfacts button:hover {
+  background: #e07a00;
+}
+.funfact-text {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #005cbf;
+}
